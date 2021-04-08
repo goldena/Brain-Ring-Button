@@ -99,12 +99,12 @@
 		CF89839A261F9F9C0062CBB2 /* Brain Ring Button */ = {
 			isa = PBXGroup;
 			children = (
+				CF8983E1261FB5EB0062CBB2 /* Custom Views */,
 				CF8983CE261F9FB20062CBB2 /* Model */,
 				CF8983D5261F9FB90062CBB2 /* Views */,
 				CF8983D7261F9FCF0062CBB2 /* Controllers */,
 				CF89839B261F9F9C0062CBB2 /* AppDelegate.swift */,
 				CF89839D261F9F9C0062CBB2 /* SceneDelegate.swift */,
-				CF89839F261F9F9C0062CBB2 /* ViewController.swift */,
 				CF8983A4261F9F9F0062CBB2 /* Assets.xcassets */,
 				CF8983A9261F9F9F0062CBB2 /* Info.plist */,
 			);
@@ -148,8 +148,16 @@
 		CF8983D7261F9FCF0062CBB2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CF89839F261F9F9C0062CBB2 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF8983E1261FB5EB0062CBB2 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
