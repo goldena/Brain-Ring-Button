@@ -99,12 +99,13 @@
 		CF89839A261F9F9C0062CBB2 /* Brain Ring Button */ = {
 			isa = PBXGroup;
 			children = (
+				CF8983CE261F9FB20062CBB2 /* Model */,
+				CF8983D5261F9FB90062CBB2 /* Views */,
+				CF8983D7261F9FCF0062CBB2 /* Controllers */,
 				CF89839B261F9F9C0062CBB2 /* AppDelegate.swift */,
 				CF89839D261F9F9C0062CBB2 /* SceneDelegate.swift */,
 				CF89839F261F9F9C0062CBB2 /* ViewController.swift */,
-				CF8983A1261F9F9C0062CBB2 /* Main.storyboard */,
 				CF8983A4261F9F9F0062CBB2 /* Assets.xcassets */,
-				CF8983A6261F9F9F0062CBB2 /* LaunchScreen.storyboard */,
 				CF8983A9261F9F9F0062CBB2 /* Info.plist */,
 			);
 			path = "Brain Ring Button";
@@ -126,6 +127,29 @@
 				CF8983BF261F9FA00062CBB2 /* Info.plist */,
 			);
 			path = "Brain Ring ButtonUITests";
+			sourceTree = "<group>";
+		};
+		CF8983CE261F9FB20062CBB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF8983D5261F9FB90062CBB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF8983A1261F9F9C0062CBB2 /* Main.storyboard */,
+				CF8983A6261F9F9F0062CBB2 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF8983D7261F9FCF0062CBB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-Button";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -462,6 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-Button";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
