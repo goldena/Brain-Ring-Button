@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF89839C261F9F9C0062CBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89839B261F9F9C0062CBB2 /* AppDelegate.swift */; };
+		CF89839E261F9F9C0062CBB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89839D261F9F9C0062CBB2 /* SceneDelegate.swift */; };
+		CF8983A0261F9F9C0062CBB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89839F261F9F9C0062CBB2 /* ViewController.swift */; };
+		CF8983A3261F9F9C0062CBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8983A1261F9F9C0062CBB2 /* Main.storyboard */; };
+		CF8983A5261F9F9F0062CBB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8983A4261F9F9F0062CBB2 /* Assets.xcassets */; };
+		CF8983A8261F9F9F0062CBB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8983A6261F9F9F0062CBB2 /* LaunchScreen.storyboard */; };
+		CF8983B3261F9F9F0062CBB2 /* Brain_Ring_ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8983B2261F9F9F0062CBB2 /* Brain_Ring_ButtonTests.swift */; };
+		CF8983BE261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8983BD261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF8983AF261F9F9F0062CBB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF898390261F9F9C0062CBB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF898397261F9F9C0062CBB2;
+			remoteInfo = "Brain Ring Button";
+		};
+		CF8983BA261F9FA00062CBB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF898390261F9F9C0062CBB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF898397261F9F9C0062CBB2;
+			remoteInfo = "Brain Ring Button";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF898398261F9F9C0062CBB2 /* Brain Ring Button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Ring Button.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF89839B261F9F9C0062CBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF89839D261F9F9C0062CBB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF89839F261F9F9C0062CBB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF8983A2261F9F9C0062CBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF8983A4261F9F9F0062CBB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF8983A7261F9F9F0062CBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF8983A9261F9F9F0062CBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8983AE261F9F9F0062CBB2 /* Brain Ring ButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brain Ring ButtonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF8983B2261F9F9F0062CBB2 /* Brain_Ring_ButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain_Ring_ButtonTests.swift; sourceTree = "<group>"; };
+		CF8983B4261F9FA00062CBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8983B9261F9FA00062CBB2 /* Brain Ring ButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brain Ring ButtonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF8983BD261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain_Ring_ButtonUITests.swift; sourceTree = "<group>"; };
+		CF8983BF261F9FA00062CBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF898395261F9F9C0062CBB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8983AB261F9F9F0062CBB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8983B6261F9FA00062CBB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF89838F261F9F9C0062CBB2 = {
+			isa = PBXGroup;
+			children = (
+				CF89839A261F9F9C0062CBB2 /* Brain Ring Button */,
+				CF8983B1261F9F9F0062CBB2 /* Brain Ring ButtonTests */,
+				CF8983BC261F9FA00062CBB2 /* Brain Ring ButtonUITests */,
+				CF898399261F9F9C0062CBB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF898399261F9F9C0062CBB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF898398261F9F9C0062CBB2 /* Brain Ring Button.app */,
+				CF8983AE261F9F9F0062CBB2 /* Brain Ring ButtonTests.xctest */,
+				CF8983B9261F9FA00062CBB2 /* Brain Ring ButtonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF89839A261F9F9C0062CBB2 /* Brain Ring Button */ = {
+			isa = PBXGroup;
+			children = (
+				CF89839B261F9F9C0062CBB2 /* AppDelegate.swift */,
+				CF89839D261F9F9C0062CBB2 /* SceneDelegate.swift */,
+				CF89839F261F9F9C0062CBB2 /* ViewController.swift */,
+				CF8983A1261F9F9C0062CBB2 /* Main.storyboard */,
+				CF8983A4261F9F9F0062CBB2 /* Assets.xcassets */,
+				CF8983A6261F9F9F0062CBB2 /* LaunchScreen.storyboard */,
+				CF8983A9261F9F9F0062CBB2 /* Info.plist */,
+			);
+			path = "Brain Ring Button";
+			sourceTree = "<group>";
+		};
+		CF8983B1261F9F9F0062CBB2 /* Brain Ring ButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF8983B2261F9F9F0062CBB2 /* Brain_Ring_ButtonTests.swift */,
+				CF8983B4261F9FA00062CBB2 /* Info.plist */,
+			);
+			path = "Brain Ring ButtonTests";
+			sourceTree = "<group>";
+		};
+		CF8983BC261F9FA00062CBB2 /* Brain Ring ButtonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF8983BD261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift */,
+				CF8983BF261F9FA00062CBB2 /* Info.plist */,
+			);
+			path = "Brain Ring ButtonUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF898397261F9F9C0062CBB2 /* Brain Ring Button */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF8983C2261F9FA00062CBB2 /* Build configuration list for PBXNativeTarget "Brain Ring Button" */;
+			buildPhases = (
+				CF898394261F9F9C0062CBB2 /* Sources */,
+				CF898395261F9F9C0062CBB2 /* Frameworks */,
+				CF898396261F9F9C0062CBB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Brain Ring Button";
+			productName = "Brain Ring Button";
+			productReference = CF898398261F9F9C0062CBB2 /* Brain Ring Button.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF8983AD261F9F9F0062CBB2 /* Brain Ring ButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF8983C5261F9FA00062CBB2 /* Build configuration list for PBXNativeTarget "Brain Ring ButtonTests" */;
+			buildPhases = (
+				CF8983AA261F9F9F0062CBB2 /* Sources */,
+				CF8983AB261F9F9F0062CBB2 /* Frameworks */,
+				CF8983AC261F9F9F0062CBB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF8983B0261F9F9F0062CBB2 /* PBXTargetDependency */,
+			);
+			name = "Brain Ring ButtonTests";
+			productName = "Brain Ring ButtonTests";
+			productReference = CF8983AE261F9F9F0062CBB2 /* Brain Ring ButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF8983B8261F9FA00062CBB2 /* Brain Ring ButtonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF8983C8261F9FA00062CBB2 /* Build configuration list for PBXNativeTarget "Brain Ring ButtonUITests" */;
+			buildPhases = (
+				CF8983B5261F9FA00062CBB2 /* Sources */,
+				CF8983B6261F9FA00062CBB2 /* Frameworks */,
+				CF8983B7261F9FA00062CBB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF8983BB261F9FA00062CBB2 /* PBXTargetDependency */,
+			);
+			name = "Brain Ring ButtonUITests";
+			productName = "Brain Ring ButtonUITests";
+			productReference = CF8983B9261F9FA00062CBB2 /* Brain Ring ButtonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF898390261F9F9C0062CBB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CF898397261F9F9C0062CBB2 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CF8983AD261F9F9F0062CBB2 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CF898397261F9F9C0062CBB2;
+					};
+					CF8983B8261F9FA00062CBB2 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CF898397261F9F9C0062CBB2;
+					};
+				};
+			};
+			buildConfigurationList = CF898393261F9F9C0062CBB2 /* Build configuration list for PBXProject "Brain Ring Button" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF89838F261F9F9C0062CBB2;
+			productRefGroup = CF898399261F9F9C0062CBB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF898397261F9F9C0062CBB2 /* Brain Ring Button */,
+				CF8983AD261F9F9F0062CBB2 /* Brain Ring ButtonTests */,
+				CF8983B8261F9FA00062CBB2 /* Brain Ring ButtonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF898396261F9F9C0062CBB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF8983A8261F9F9F0062CBB2 /* LaunchScreen.storyboard in Resources */,
+				CF8983A5261F9F9F0062CBB2 /* Assets.xcassets in Resources */,
+				CF8983A3261F9F9C0062CBB2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8983AC261F9F9F0062CBB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8983B7261F9FA00062CBB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF898394261F9F9C0062CBB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF8983A0261F9F9C0062CBB2 /* ViewController.swift in Sources */,
+				CF89839C261F9F9C0062CBB2 /* AppDelegate.swift in Sources */,
+				CF89839E261F9F9C0062CBB2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8983AA261F9F9F0062CBB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF8983B3261F9F9F0062CBB2 /* Brain_Ring_ButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8983B5261F9FA00062CBB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF8983BE261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF8983B0261F9F9F0062CBB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF898397261F9F9C0062CBB2 /* Brain Ring Button */;
+			targetProxy = CF8983AF261F9F9F0062CBB2 /* PBXContainerItemProxy */;
+		};
+		CF8983BB261F9FA00062CBB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF898397261F9F9C0062CBB2 /* Brain Ring Button */;
+			targetProxy = CF8983BA261F9FA00062CBB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF8983A1261F9F9C0062CBB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF8983A2261F9F9C0062CBB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF8983A6261F9F9F0062CBB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF8983A7261F9F9F0062CBB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF8983C0261F9FA00062CBB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF8983C1261F9FA00062CBB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF8983C3261F9FA00062CBB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLJYB66SUP;
+				INFOPLIST_FILE = "Brain Ring Button/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-Button";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF8983C4261F9FA00062CBB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLJYB66SUP;
+				INFOPLIST_FILE = "Brain Ring Button/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-Button";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF8983C6261F9FA00062CBB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLJYB66SUP;
+				INFOPLIST_FILE = "Brain Ring ButtonTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-ButtonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brain Ring Button.app/Brain Ring Button";
+			};
+			name = Debug;
+		};
+		CF8983C7261F9FA00062CBB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLJYB66SUP;
+				INFOPLIST_FILE = "Brain Ring ButtonTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-ButtonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brain Ring Button.app/Brain Ring Button";
+			};
+			name = Release;
+		};
+		CF8983C9261F9FA00062CBB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLJYB66SUP;
+				INFOPLIST_FILE = "Brain Ring ButtonUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-ButtonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Brain Ring Button";
+			};
+			name = Debug;
+		};
+		CF8983CA261F9FA00062CBB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLJYB66SUP;
+				INFOPLIST_FILE = "Brain Ring ButtonUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kitcorp.Brain-Ring-ButtonUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Brain Ring Button";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF898393261F9F9C0062CBB2 /* Build configuration list for PBXProject "Brain Ring Button" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8983C0261F9FA00062CBB2 /* Debug */,
+				CF8983C1261F9FA00062CBB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF8983C2261F9FA00062CBB2 /* Build configuration list for PBXNativeTarget "Brain Ring Button" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8983C3261F9FA00062CBB2 /* Debug */,
+				CF8983C4261F9FA00062CBB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF8983C5261F9FA00062CBB2 /* Build configuration list for PBXNativeTarget "Brain Ring ButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8983C6261F9FA00062CBB2 /* Debug */,
+				CF8983C7261F9FA00062CBB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF8983C8261F9FA00062CBB2 /* Build configuration list for PBXNativeTarget "Brain Ring ButtonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8983C9261F9FA00062CBB2 /* Debug */,
+				CF8983CA261F9FA00062CBB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF898390261F9F9C0062CBB2 /* Project object */;
+}
