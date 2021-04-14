@@ -15,6 +15,7 @@
 		CF8983A8261F9F9F0062CBB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8983A6261F9F9F0062CBB2 /* LaunchScreen.storyboard */; };
 		CF8983B3261F9F9F0062CBB2 /* Brain_Ring_ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8983B2261F9F9F0062CBB2 /* Brain_Ring_ButtonTests.swift */; };
 		CF8983BE261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8983BD261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift */; };
+		CF8983EF2621CF7C0062CBB2 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8983EE2621CF7C0062CBB2 /* StopButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CF8983B9261F9FA00062CBB2 /* Brain Ring ButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brain Ring ButtonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8983BD261F9FA00062CBB2 /* Brain_Ring_ButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain_Ring_ButtonUITests.swift; sourceTree = "<group>"; };
 		CF8983BF261F9FA00062CBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8983EE2621CF7C0062CBB2 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		CF8983E1261FB5EB0062CBB2 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF8983EE2621CF7C0062CBB2 /* StopButton.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				CF8983A0261F9F9C0062CBB2 /* PlayerViewController.swift in Sources */,
 				CF89839C261F9F9C0062CBB2 /* AppDelegate.swift in Sources */,
 				CF89839E261F9F9C0062CBB2 /* SceneDelegate.swift in Sources */,
+				CF8983EF2621CF7C0062CBB2 /* StopButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

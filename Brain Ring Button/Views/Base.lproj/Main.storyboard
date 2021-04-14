@@ -75,7 +75,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8H-aM-xbZ">
                                         <rect key="frame" x="269.5" y="0.0" width="269" height="393"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-kK-fde">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-kK-fde" customClass="StopButton" customModule="Brain_Ring_Button" customModuleProvider="target">
                                                 <rect key="frame" x="-4" y="58" width="277" height="277"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
@@ -85,6 +85,9 @@
                                                 <state key="normal" title="SECONDS">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSk-Sz-TJd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
