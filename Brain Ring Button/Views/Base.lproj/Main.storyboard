@@ -120,7 +120,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-Bm-wFG">
                                                 <rect key="frame" x="0.0" y="0.0" width="269.5" height="393"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxh-w7-Mkd">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxh-w7-Mkd" customClass="CircularCountdownTimer" customModule="Brain_Ring_Button" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="269.5" height="131"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
@@ -163,6 +163,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="circularTimerView" destination="yxh-w7-Mkd" id="IRM-AC-t9b"/>
                         <outlet property="stopButton" destination="kjw-kK-fde" id="vGF-iu-ZbT"/>
                     </connections>
                 </viewController>

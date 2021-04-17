@@ -11,13 +11,15 @@ class PlayerViewController: UIViewController {
 
     // MARK: - Property(s)
     
-    let countdownTimeLimit = 10
-    var remainingTime: Int!
+    let countdownTimeLimit: Float = 10.0
+    var remainingTime: Float!
     
     var countdownTimer = Timer()
     
     // MARK: - Outlet(s)
         
+    @IBOutlet weak var circularTimerView: CircularCountdownTimer!
+
     @IBOutlet weak var stopButton: StopButton!
         
     // MARK: - View Lifecycle
@@ -27,6 +29,8 @@ class PlayerViewController: UIViewController {
         
         remainingTime = countdownTimeLimit
         stopButton.setTitle(String(remainingTime), for: .normal)
+        
+        circularTimerView.proportionOfCircle = 1.0
         
         resumeTimer()
     }
@@ -41,6 +45,8 @@ class PlayerViewController: UIViewController {
             return
         }
 
+        circularTimerView.proportionOfCircle = CGFloat(remainingTime / countdownTimeLimit)
+        
         remainingTime -= 1
         stopButton.setTitle(String(remainingTime), for: .normal)
     }
