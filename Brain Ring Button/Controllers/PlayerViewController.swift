@@ -9,6 +9,13 @@ import UIKit
 
 class PlayerViewController: UIViewController {
 
+    // MARK: - Property(s)
+    
+    let countdownTimeLimit = 10
+    var remainingTime: Int!
+    
+    var countdownTimer = Timer()
+    
     // MARK: - Outlet(s)
         
     @IBOutlet weak var stopButton: StopButton!
@@ -18,52 +25,51 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stopButton.cornerRadius = stopButton.bounds.height / 2
+        remainingTime = countdownTimeLimit
+        stopButton.setTitle(String(remainingTime), for: .normal)
+        
+        resumeTimer()
     }
+    
+    // MARK: - Method(s)
+    
+    @objc func timerUpdated() {
+        guard remainingTime > 0 else {
+            stopTimer()
+            stopButton.isEnabled = false
+            
+            return
+        }
 
+        remainingTime -= 1
+        stopButton.setTitle(String(remainingTime), for: .normal)
+    }
+    
+    func resumeTimer() {
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerUpdated), userInfo: nil, repeats: true)
+    }
+    
+    func stopTimer() {
+        countdownTimer.invalidate()
+    }
+    
     // MARK: - Action(s)
-
-    func makeCABasicAnimation(keyPath: String, fromValue: Any?, toValue: Any?, duration: CFTimeInterval) -> CABasicAnimation {
-        let basicAnimation = CABasicAnimation(keyPath: keyPath)
-        
-        basicAnimation.fromValue = fromValue
-        basicAnimation.toValue = toValue
-        basicAnimation.duration = duration
-        
-        return basicAnimation
-    }
     
     @IBAction func stopButtonPressed(_ sender: StopButton) {
+        sender.isEnabled = false
+        
+        stopTimer()
+        
+        stopButton.setTitle(String(remainingTime), for: .normal)
+    }
     
-        #warning("Start here")
+    @IBAction func stopResetButtonPressed(_ sender: UIButton) {
+        stopTimer()
         
-        DispatchQueue.main.async {
-            self.stopButton.layer.add(self.makeCABasicAnimation(keyPath: "cornerRadius", fromValue: 0.0, toValue: 50.0, duration: 1), forKey: "cornerRadius")
-        }
+        remainingTime = countdownTimeLimit
+        resumeTimer()
         
-        let buttonPressAnimation = UIViewPropertyAnimator(
-            duration: 1,
-            curve: .easeOut
-        ) {
-             sender.shadowOffset = CGSize(width: 0.0, height: 0.0)
-             sender.shadowRadius = 0
-//            sender.cornerRadius = 0
-        }
-                
-        buttonPressAnimation.addCompletion { (_) in
-            let reversedButtonPressAnimation = UIViewPropertyAnimator(
-                duration: 1,
-                curve: .easeOut
-            ) {
-                // sender.cornerRadius = 50
-                sender.shadowOffset = CGSize(width: 10.0, height: 10.0)
-                sender.shadowRadius = 10
-            }
-                        
-            reversedButtonPressAnimation.startAnimation()
-        }
-
-        buttonPressAnimation.startAnimation()
+        stopButton.isEnabled = true
     }
 }
 
