@@ -14,12 +14,15 @@ class PlayerViewController: UIViewController {
     let countdownTimeLimit: Float = 10.0
     var remainingTime: Float!
     
+    var remainingTimeToString: String {
+        String(Int(remainingTime))
+    }
+    
     var countdownTimer = Timer()
     
     // MARK: - Outlet(s)
         
     @IBOutlet weak var circularTimerView: CircularCountdownTimer!
-
     @IBOutlet weak var stopButton: StopButton!
         
     // MARK: - View Lifecycle
@@ -27,12 +30,7 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        remainingTime = countdownTimeLimit
-        stopButton.setTitle(String(remainingTime), for: .normal)
-        
-        circularTimerView.proportionOfCircle = 1.0
-        
-        resumeTimer()
+        resetTimer()
     }
     
     // MARK: - Method(s)
@@ -41,14 +39,15 @@ class PlayerViewController: UIViewController {
         guard remainingTime > 0 else {
             stopTimer()
             stopButton.isEnabled = false
+            stopButton.setTitle(String("Time is up!"), for: .normal)
             
             return
         }
-
-        circularTimerView.proportionOfCircle = CGFloat(remainingTime / countdownTimeLimit)
         
         remainingTime -= 1
-        stopButton.setTitle(String(remainingTime), for: .normal)
+        
+        circularTimerView.proportionOfCircle = CGFloat(remainingTime / countdownTimeLimit)
+        stopButton.setTitle(remainingTimeToString, for: .normal)
     }
     
     func resumeTimer() {
@@ -59,23 +58,28 @@ class PlayerViewController: UIViewController {
         countdownTimer.invalidate()
     }
     
+    func resetTimer() {
+        stopTimer()
+                        
+        remainingTime = countdownTimeLimit
+        stopButton.setTitle(remainingTimeToString, for: .normal)
+        circularTimerView.proportionOfCircle = 1.0
+        
+        resumeTimer()
+        
+        stopButton.isEnabled = true
+    }
+    
     // MARK: - Action(s)
     
     @IBAction func stopButtonPressed(_ sender: StopButton) {
         sender.isEnabled = false
         
         stopTimer()
-        
-        stopButton.setTitle(String(remainingTime), for: .normal)
     }
     
     @IBAction func stopResetButtonPressed(_ sender: UIButton) {
-        stopTimer()
-        
-        remainingTime = countdownTimeLimit
-        resumeTimer()
-        
-        stopButton.isEnabled = true
+        resetTimer()
     }
 }
 

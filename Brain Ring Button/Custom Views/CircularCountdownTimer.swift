@@ -9,6 +9,8 @@ import UIKit
 
 class CircularCountdownTimer: UIView {
 
+    // MARK: - Property(s)
+    
     var proportionOfCircle: CGFloat {
         get { circleLayer.strokeEnd }
         set { circleLayer.strokeEnd = newValue }
@@ -18,6 +20,23 @@ class CircularCountdownTimer: UIView {
     
     private let startAngle = CGFloat(Double.pi * 1.5)
     private let endAngle = CGFloat(Double.pi * -0.5)
+    private let padding = CGFloat(30)
+    
+    // MARK: - View Lifecycle
+    
+    override func layoutSubviews() {
+        let circlePath = UIBezierPath(
+            arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
+            radius: (min(bounds.width, bounds.height) - padding) / 2,
+            startAngle: startAngle,
+            endAngle: endAngle,
+            clockwise: false
+        )
+        
+        circleLayer.path = circlePath.cgPath
+    }
+    
+    // MARK: - Init
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -33,28 +52,4 @@ class CircularCountdownTimer: UIView {
         
         layer.addSublayer(circleLayer)
     }
-    
-    override func layoutSubviews() {
-        let circlePath = UIBezierPath(
-            arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
-            radius: (min(bounds.width, bounds.height) - 30) / 2,
-            startAngle: startAngle,
-            endAngle: endAngle,
-            clockwise: false
-        )
-        
-        circleLayer.path = circlePath.cgPath
-    }
 }
-
-//    private lazy var progressLayer: CAShapeLayer = {
-//        let progressLayer = CAShapeLayer()
-//
-//        progressLayer.strokeColor = UIColor.blue.cgColor
-//        progressLayer.fillColor = UIColor.clear.cgColor
-//        progressLayer.lineWidth = strokeWidth
-//
-//        self.layer.addSublayer(progressLayer)
-//
-//        return progressLayer
-//    }()
