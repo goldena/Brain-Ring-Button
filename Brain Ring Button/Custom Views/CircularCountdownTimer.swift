@@ -25,8 +25,8 @@ class CircularCountdownTimer: UIView {
         backgroundColor = .clear
         
         let circlePath = UIBezierPath(
-            arcCenter: CGPoint(x: frame.width, y: frame.height),
-            radius: (frame.width - 10) / 2,
+            arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
+            radius: (min(bounds.width, bounds.height) - 10) / 2,
             startAngle: startAngle,
             endAngle: endAngle,
             clockwise: false
