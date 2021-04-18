@@ -16,34 +16,37 @@ class CircularCountdownTimer: UIView {
     
     private var circleLayer: CAShapeLayer!
     
-    private let startAngle = CGFloat(Double.pi * 2.0)
-    private let endAngle = CGFloat(0.0)
+    private let startAngle = CGFloat(Double.pi * 1.5)
+    private let endAngle = CGFloat(Double.pi * -0.5)
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
+        circleLayer = CAShapeLayer()
+
         backgroundColor = .clear
         
+        circleLayer.fillColor = UIColor.clear.cgColor
+        circleLayer.strokeColor = UIColor.blue.cgColor
+        circleLayer.lineWidth = 10
+        circleLayer.strokeEnd = 0.0
+        
+        layer.addSublayer(circleLayer)
+    }
+    
+    override func layoutSubviews() {
         let circlePath = UIBezierPath(
             arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
-            radius: (min(bounds.width, bounds.height) - 10) / 2,
+            radius: (min(bounds.width, bounds.height) - 30) / 2,
             startAngle: startAngle,
             endAngle: endAngle,
             clockwise: false
         )
         
-        circleLayer = CAShapeLayer()
         circleLayer.path = circlePath.cgPath
-        circleLayer.fillColor = UIColor.clear.cgColor
-        circleLayer.strokeColor = UIColor.blue.cgColor
-        circleLayer.lineWidth = 10
-        
-        circleLayer.strokeEnd = 0.0
-        
-        layer.addSublayer(circleLayer)
     }
-}    
-    
+}
+
 //    private lazy var progressLayer: CAShapeLayer = {
 //        let progressLayer = CAShapeLayer()
 //
