@@ -23,12 +23,30 @@ class StopButton: UIButton {
     private var shadowRadius: CGFloat = 10
 
     // MARK: - View Lifecycle
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
+
+        #warning("Start here")
+        guard let superview = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        removeConstraints(constraints)
+        
+        centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+        centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+        
+        if superview.bounds.width >= superview.bounds.height {
+            heightAnchor.constraint(equalTo: superview.heightAnchor, constant: -30).isActive = true
+            widthAnchor.constraint(equalTo: heightAnchor).isActive = true
+        } else {
+            widthAnchor.constraint(equalTo: superview.widthAnchor, constant: -30).isActive = true
+            heightAnchor.constraint(equalTo: widthAnchor).isActive = true
+        }
+
         
         guard isShadowEnabled else { return }
-
+        
         layerWithShadow.path = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height / 2).cgPath
         
         if isEnabled {

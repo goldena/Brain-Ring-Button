@@ -20,7 +20,7 @@ class CircularCountdownTimer: UIView {
     
     private let startAngle = CGFloat(Double.pi * 1.5)
     private let endAngle = CGFloat(Double.pi * -0.5)
-    private let padding = CGFloat(30)
+    private let padding = CGFloat(0)
     
     // MARK: - View Lifecycle
     

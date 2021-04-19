@@ -85,15 +85,13 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8H-aM-xbZ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8H-aM-xbZ" customClass="CircularCountdownTimer" customModule="Brain_Ring_Button" customModuleProvider="target">
                                         <rect key="frame" x="269.5" y="0.0" width="269" height="393"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-kK-fde" customClass="StopButton" customModule="Brain_Ring_Button" customModuleProvider="target">
-                                                <rect key="frame" x="-4" y="58" width="277" height="277"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjw-kK-fde" customClass="StopButton" customModule="Brain_Ring_Button" customModuleProvider="target">
+                                                <rect key="frame" x="119.5" y="172.5" width="30" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="kjw-kK-fde" secondAttribute="height" id="C9i-Sf-HVS"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" systemColor="labelColor"/>
@@ -104,15 +102,6 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="kjw-kK-fde" secondAttribute="bottom" constant="50" id="FtD-dF-4t0">
-                                                <variation key="heightClass=regular" constant="0.0"/>
-                                            </constraint>
-                                            <constraint firstItem="kjw-kK-fde" firstAttribute="top" secondItem="Z8H-aM-xbZ" secondAttribute="topMargin" constant="50" id="YhY-ob-rpQ">
-                                                <variation key="heightClass=regular" constant="0.0"/>
-                                            </constraint>
-                                            <constraint firstItem="kjw-kK-fde" firstAttribute="centerX" secondItem="Z8H-aM-xbZ" secondAttribute="centerX" id="xW4-Sp-6dn"/>
-                                        </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6ec-T3-zKS">
                                         <rect key="frame" x="538.5" y="0.0" width="269.5" height="393"/>
@@ -120,7 +109,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-Bm-wFG">
                                                 <rect key="frame" x="0.0" y="0.0" width="269.5" height="393"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxh-w7-Mkd" customClass="CircularCountdownTimer" customModule="Brain_Ring_Button" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxh-w7-Mkd">
                                                         <rect key="frame" x="0.0" y="0.0" width="269.5" height="131"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
@@ -163,13 +152,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="circularTimerView" destination="yxh-w7-Mkd" id="IRM-AC-t9b"/>
+                        <outlet property="circularTimerView" destination="Z8H-aM-xbZ" id="tpg-1p-rht"/>
                         <outlet property="stopButton" destination="kjw-kK-fde" id="vGF-iu-ZbT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.428571428571431" y="88.405797101449281"/>
+            <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>

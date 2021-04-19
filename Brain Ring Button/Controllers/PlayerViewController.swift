@@ -33,6 +33,12 @@ class PlayerViewController: UIViewController {
         resetTimer()
     }
     
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//        
+//        stopButton.switchConstraints()
+//    }
+    
     // MARK: - Method(s)
     
     @objc func timerUpdated() {
@@ -82,7 +88,3 @@ class PlayerViewController: UIViewController {
         resetTimer()
     }
 }
-
-// MARK: - Extension(s) - UIViewController
-
-
