@@ -11,10 +11,12 @@ class PlayerViewController: UIViewController {
 
     // MARK: - Property(s)
     
-    let countdownTimeLimit: Float = 10.0
-    var remainingTime: Float!
+    private var stopButton: StopButton!
     
-    var remainingTimeToString: String {
+    private let countdownTimeLimit: Float = 60.0
+    private var remainingTime: Float!
+    
+    private var remainingTimeToString: String {
         String(Int(remainingTime))
     }
     
@@ -23,21 +25,29 @@ class PlayerViewController: UIViewController {
     // MARK: - Outlet(s)
         
     @IBOutlet weak var circularTimerView: CircularCountdownTimer!
-    @IBOutlet weak var stopButton: StopButton!
         
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configStopButton()
+        
         resetTimer()
     }
     
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransition(to: size, with: coordinator)
-//        
-//        stopButton.switchConstraints()
-//    }
+    func configStopButton() {
+        stopButton = StopButton(frame: .zero)
+        stopButton.translatesAutoresizingMaskIntoConstraints = false
+
+        stopButton.addTarget(self, action: #selector(stopButtonPressed(_:)), for: .touchUpInside)
+        
+        circularTimerView.addSubview(stopButton)
+
+        stopButton.centerYAnchor.constraint(equalTo: circularTimerView.centerYAnchor).isActive = true
+        stopButton.centerXAnchor.constraint(equalTo: circularTimerView.centerXAnchor).isActive = true
+        stopButton.widthAnchor.constraint(equalTo: stopButton.heightAnchor).isActive = true
+    }
     
     // MARK: - Method(s)
     
@@ -78,7 +88,7 @@ class PlayerViewController: UIViewController {
     
     // MARK: - Action(s)
     
-    @IBAction func stopButtonPressed(_ sender: StopButton) {
+    @objc func stopButtonPressed(_ sender: StopButton) {
         sender.isEnabled = false
         
         stopTimer()

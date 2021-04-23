@@ -48,6 +48,7 @@ class CircularCountdownTimer: UIView {
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.strokeColor = UIColor.blue.cgColor
         circleLayer.lineWidth = 10
+        circleLayer.lineCap = .round
         circleLayer.strokeEnd = 0.0
         
         layer.addSublayer(circleLayer)
