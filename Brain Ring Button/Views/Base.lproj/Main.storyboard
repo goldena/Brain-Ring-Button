@@ -162,17 +162,17 @@
                                             <constraint firstAttribute="height" constant="150" id="hEG-uL-wcf"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="xML-L5-184">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xML-L5-184">
                                         <rect key="frame" x="0.0" y="150" width="808" height="243"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="03p-EA-BgR">
-                                                <rect key="frame" x="0.0" y="0.0" width="225.5" height="243"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="269.5" height="243"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hFi-kh-HoU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="225.5" height="243"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="269.5" height="243"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mg-kR-Hql">
-                                                                <rect key="frame" x="0.0" y="0.0" width="225.5" height="121.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="269.5" height="121.5"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-qR-jvC">
                                                                         <rect key="frame" x="8" y="8" width="50" height="50"/>
@@ -192,8 +192,8 @@
                                                                     <constraint firstItem="Rmg-qR-jvC" firstAttribute="top" secondItem="3mg-kR-Hql" secondAttribute="topMargin" id="hlO-Is-5m7"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJr-iS-BfI">
-                                                                <rect key="frame" x="0.0" y="121.5" width="225.5" height="121.5"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJr-iS-BfI" userLabel="Yes Button View">
+                                                                <rect key="frame" x="0.0" y="121.5" width="269.5" height="121.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -201,20 +201,20 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fou-hn-JdZ" customClass="CircularCountdownTimer" customModule="Brain_Ring_Button" customModuleProvider="target">
-                                                <rect key="frame" x="291.5" y="0.0" width="225" height="243"/>
+                                                <rect key="frame" x="269.5" y="0.0" width="269" height="243"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EFK-aU-5qe">
-                                                <rect key="frame" x="582.5" y="0.0" width="225.5" height="243"/>
+                                                <rect key="frame" x="538.5" y="0.0" width="269.5" height="243"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kfd-N6-bZu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="225.5" height="243"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="269.5" height="243"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQ0-j3-Mdc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="225.5" height="121.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="269.5" height="121.5"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uci-MG-TUY">
-                                                                        <rect key="frame" x="171.5" y="8" width="46" height="30"/>
+                                                                        <rect key="frame" x="215.5" y="8" width="46" height="30"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <connections>
                                                                             <action selector="stopResetButtonPressed:" destination="FFY-no-ajZ" eventType="touchUpInside" id="Wxu-nX-9jz"/>
@@ -227,8 +227,8 @@
                                                                     <constraint firstItem="uci-MG-TUY" firstAttribute="trailing" secondItem="QQ0-j3-Mdc" secondAttribute="trailingMargin" id="V3J-pA-x7q"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4s5-RV-HRY">
-                                                                <rect key="frame" x="0.0" y="121.5" width="225.5" height="121.5"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4s5-RV-HRY" userLabel="No Button View">
+                                                                <rect key="frame" x="0.0" y="121.5" width="269.5" height="121.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -261,6 +261,9 @@
                     </view>
                     <connections>
                         <outlet property="circularTimerView" destination="fou-hn-JdZ" id="rbd-nc-hVp"/>
+                        <outlet property="noButtonView" destination="4s5-RV-HRY" id="iPK-Fr-mmR"/>
+                        <outlet property="playersStackView" destination="vq8-LX-6Vs" id="IfA-gL-ALD"/>
+                        <outlet property="yesButtonView" destination="GJr-iS-BfI" id="qo8-po-GTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba9-3W-DrR" sceneMemberID="firstResponder"/>

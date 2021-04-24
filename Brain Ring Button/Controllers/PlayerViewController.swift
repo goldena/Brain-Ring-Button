@@ -11,7 +11,7 @@ class PlayerViewController: UIViewController {
 
     // MARK: - Property(s)
     
-    private var stopButton: StopButton!
+    private var stopButton: RoundButtonWithShadow!
     
     private let countdownTimeLimit: Float = 60.0
     private var remainingTime: Float!
@@ -25,30 +25,31 @@ class PlayerViewController: UIViewController {
     // MARK: - Outlet(s)
         
     @IBOutlet weak var circularTimerView: CircularCountdownTimer!
-        
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configStopButton()
+        stopButton = RoundButtonWithShadow(frame: .zero)
+        configButton(stopButton, addToView: circularTimerView)
+        
+        stopButton.addTarget(self, action: #selector(stopButtonPressed(_:)), for: .touchUpInside)
         
         resetTimer()
     }
     
-    func configStopButton() {
-        stopButton = StopButton(frame: .zero)
-        stopButton.translatesAutoresizingMaskIntoConstraints = false
+    private func configButton(_ button: RoundButtonWithShadow, addToView: UIView) {
+        // button = RoundButtonWithShadow(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
 
-        stopButton.addTarget(self, action: #selector(stopButtonPressed(_:)), for: .touchUpInside)
-        
-        circularTimerView.addSubview(stopButton)
+        addToView.addSubview(button)
 
-        stopButton.centerYAnchor.constraint(equalTo: circularTimerView.centerYAnchor).isActive = true
-        stopButton.centerXAnchor.constraint(equalTo: circularTimerView.centerXAnchor).isActive = true
-        stopButton.widthAnchor.constraint(equalTo: stopButton.heightAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: addToView.centerYAnchor).isActive = true
+        button.centerXAnchor.constraint(equalTo: addToView.centerXAnchor).isActive = true
+        button.widthAnchor.constraint(equalTo: button.heightAnchor).isActive = true
     }
-    
+
     // MARK: - Method(s)
     
     @objc func timerUpdated() {
@@ -88,7 +89,7 @@ class PlayerViewController: UIViewController {
     
     // MARK: - Action(s)
     
-    @objc func stopButtonPressed(_ sender: StopButton) {
+    @objc func stopButtonPressed(_ sender: RoundButtonWithShadow) {
         sender.isEnabled = false
         
         stopTimer()

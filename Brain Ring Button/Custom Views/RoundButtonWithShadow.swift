@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StopButton: UIButton {
+class RoundButtonWithShadow: UIButton {
     
     // MARK: - Property(s)
 
