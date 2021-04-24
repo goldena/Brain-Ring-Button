@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF29B2C1262B8844007883D7 /* CircularCountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29B2C0262B8844007883D7 /* CircularCountdownTimer.swift */; };
+		CF29B2CA2634AD30007883D7 /* GameMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29B2C92634AD30007883D7 /* GameMasterViewController.swift */; };
 		CF89839C261F9F9C0062CBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89839B261F9F9C0062CBB2 /* AppDelegate.swift */; };
 		CF89839E261F9F9C0062CBB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89839D261F9F9C0062CBB2 /* SceneDelegate.swift */; };
 		CF8983A0261F9F9C0062CBB2 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89839F261F9F9C0062CBB2 /* PlayerViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		CF29B2C0262B8844007883D7 /* CircularCountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCountdownTimer.swift; sourceTree = "<group>"; };
+		CF29B2C92634AD30007883D7 /* GameMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMasterViewController.swift; sourceTree = "<group>"; };
 		CF898398261F9F9C0062CBB2 /* Brain Ring Button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Ring Button.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF89839B261F9F9C0062CBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF89839D261F9F9C0062CBB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				CF89839F261F9F9C0062CBB2 /* PlayerViewController.swift */,
+				CF29B2C92634AD30007883D7 /* GameMasterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				CF8983A0261F9F9C0062CBB2 /* PlayerViewController.swift in Sources */,
 				CF29B2C1262B8844007883D7 /* CircularCountdownTimer.swift in Sources */,
+				CF29B2CA2634AD30007883D7 /* GameMasterViewController.swift in Sources */,
 				CF89839C261F9F9C0062CBB2 /* AppDelegate.swift in Sources */,
 				CF89839E261F9F9C0062CBB2 /* SceneDelegate.swift in Sources */,
 				CF8983EF2621CF7C0062CBB2 /* StopButton.swift in Sources */,
