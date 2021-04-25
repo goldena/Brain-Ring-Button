@@ -160,10 +160,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-9M-GOK" userLabel="Main Stack View">
-                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <rect key="frame" x="44" y="0.0" width="960" height="393"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vq8-LX-6Vs" userLabel="Players Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="808" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="960" height="150"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-qR-jvC">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="150"/>
@@ -179,7 +179,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uci-MG-TUY">
-                                                <rect key="frame" x="50" y="0.0" width="758" height="150"/>
+                                                <rect key="frame" x="50" y="0.0" width="910" height="150"/>
                                                 <state key="normal" title="Reset">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -193,59 +193,67 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xML-L5-184">
-                                        <rect key="frame" x="0.0" y="150" width="808" height="243"/>
+                                        <rect key="frame" x="0.0" y="150" width="960" height="243"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JAd-ql-cdf">
-                                                <rect key="frame" x="0.0" y="0.0" width="202" height="243"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="243"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IK5-O3-X9K">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="75"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="75" id="Ydn-CI-Egs"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJr-iS-BfI" userLabel="Yes Button View">
-                                                        <rect key="frame" x="0.0" y="75" width="202" height="168"/>
+                                                        <rect key="frame" x="0.0" y="75" width="240" height="168"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fou-hn-JdZ" customClass="CircularCountdownTimer" customModule="Brain_Ring_Button" customModuleProvider="target">
-                                                <rect key="frame" x="202" y="0.0" width="202" height="243"/>
+                                                <rect key="frame" x="240" y="0.0" width="240" height="243"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="agb-kV-4p4">
-                                                <rect key="frame" x="404" y="0.0" width="202" height="243"/>
+                                                <rect key="frame" x="480" y="0.0" width="240" height="243"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGg-d9-mvA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="75"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="75" id="6Wq-FV-XXh"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4s5-RV-HRY" userLabel="No Button View">
-                                                        <rect key="frame" x="0.0" y="75" width="202" height="168"/>
+                                                        <rect key="frame" x="0.0" y="75" width="240" height="168"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="F98-v1-PJp">
-                                                <rect key="frame" x="606" y="0.0" width="202" height="243"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F98-v1-PJp">
+                                                <rect key="frame" x="720" y="0.0" width="240" height="243"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAx-jx-4Sw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="61"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qul-YE-vx7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="121.5"/>
+                                                        <rect key="frame" x="0.0" y="61" width="240" height="60.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7h-w0-Sfr">
-                                                        <rect key="frame" x="0.0" y="121.5" width="202" height="121.5"/>
+                                                        <rect key="frame" x="0.0" y="121.5" width="240" height="61"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-Xb-Lw1">
+                                                        <rect key="frame" x="0.0" y="182.5" width="240" height="60.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="QPA-L5-CEE"/>
