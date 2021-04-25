@@ -12,8 +12,8 @@ class GameMasterViewController: UIViewController {
     // MARK: - Property(s)
     
     private var stopButton: RoundButtonWithShadow!
-    private var yesButton: RoundButtonWithShadow!
-    private var noButton: RoundButtonWithShadow!
+    private var yesButton:  RoundButtonWithShadow!
+    private var noButton:   RoundButtonWithShadow!
     
     private let countdownTimeLimit: Float = 60.0
     private var remainingTime: Float!
@@ -29,7 +29,6 @@ class GameMasterViewController: UIViewController {
     @IBOutlet weak var circularTimerView: CircularCountdownTimer!
         
     @IBOutlet weak var yesButtonView: UIView!
-    
     @IBOutlet weak var noButtonView: UIView!
     
     @IBOutlet weak var playersStackView: UIStackView!
@@ -46,8 +45,16 @@ class GameMasterViewController: UIViewController {
         configButton(stopButton, addToView: circularTimerView)
         configButton(yesButton, addToView: yesButtonView)
         configButton(noButton, addToView: noButtonView)
+
+        yesButton.setTitle("YES", for: .normal)
+        noButton.setTitle("NO", for: .normal)
         
         stopButton.addTarget(self, action: #selector(stopButtonPressed(_:)), for: .touchUpInside)
+        yesButton.addTarget(self, action: #selector(yesButtonPressed(_:)), for: .touchUpInside)
+        noButton.addTarget(self, action: #selector(noButtonPressed(_:)), for: .touchUpInside)
+        
+        yesButton.isEnabled = false
+        noButton.isEnabled = false
         
         resetTimer()
     }
@@ -82,6 +89,8 @@ class GameMasterViewController: UIViewController {
     
     func resumeTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerUpdated), userInfo: nil, repeats: true)
+        
+        stopButton.isEnabled = true
     }
     
     func stopTimer() {
@@ -96,8 +105,6 @@ class GameMasterViewController: UIViewController {
         circularTimerView.proportionOfCircle = 1.0
         
         resumeTimer()
-        
-        stopButton.isEnabled = true
     }
     
     // MARK: - Action(s)
@@ -106,10 +113,29 @@ class GameMasterViewController: UIViewController {
         sender.isEnabled = false
         
         stopTimer()
+        
+        yesButton.isEnabled = true
+        noButton.isEnabled = true
+    }
+    
+    @objc func yesButtonPressed(_ sender: RoundButtonWithShadow) {
+        yesButton.isEnabled = false
+        noButton.isEnabled = false
+        
+        resumeTimer()
+    }
+    
+    @objc func noButtonPressed(_ sender: RoundButtonWithShadow) {
+        yesButton.isEnabled = false
+        noButton.isEnabled = false
+        
+        resumeTimer()
     }
     
     @IBAction func stopResetButtonPressed(_ sender: UIButton) {
+        yesButton.isEnabled = false
+        noButton.isEnabled = false
+        
         resetTimer()
     }
-
 }
