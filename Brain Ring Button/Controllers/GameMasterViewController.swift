@@ -42,9 +42,13 @@ class GameMasterViewController: UIViewController {
         yesButton = RoundButtonWithShadow(frame: .zero)
         noButton = RoundButtonWithShadow(frame: .zero)
         
-        configButton(stopButton, addToView: circularTimerView)
-        configButton(yesButton, addToView: yesButtonView)
-        configButton(noButton, addToView: noButtonView)
+        stopButton.translatesAutoresizingMaskIntoConstraints = false
+        yesButton.translatesAutoresizingMaskIntoConstraints = false
+        noButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        addButtons(stopButton, nil, toView: circularTimerView)
+        addButtons(yesButton, nil, toView: yesButtonView)
+        addButtons(noButton, nil, toView: noButtonView)
 
         yesButton.setTitle("YES", for: .normal)
         noButton.setTitle("NO", for: .normal)
@@ -59,15 +63,50 @@ class GameMasterViewController: UIViewController {
         resetTimer()
     }
     
-    private func configButton(_ button: RoundButtonWithShadow, addToView: UIView) {
-        // button = RoundButtonWithShadow(frame: .zero)
-        button.translatesAutoresizingMaskIntoConstraints = false
-
-        addToView.addSubview(button)
-
-        button.centerYAnchor.constraint(equalTo: addToView.centerYAnchor).isActive = true
-        button.centerXAnchor.constraint(equalTo: addToView.centerXAnchor).isActive = true
-        button.widthAnchor.constraint(equalTo: button.heightAnchor).isActive = true
+    private func addButtons(_ button1: RoundButtonWithShadow, _ button2: RoundButtonWithShadow?, toView: UIView) {
+        if button1.superview != nil { button1.removeFromSuperview() }
+        toView.addSubview(button1)
+        
+        if let button2 = button2 {
+            if button2.superview != nil { button2.removeFromSuperview() }
+            toView.addSubview(button2)
+            
+            button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
+            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: -50).isActive = true
+            button1.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
+            
+            button2.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
+            button2.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: 50).isActive = true
+            button2.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
+        } else {
+            button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
+            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor).isActive = true
+            button1.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
+    func isPortraitOrientation(for size: CGSize) -> Bool {
+        size.height > size.width ? true : false
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+                
+        if isPortraitOrientation(for: size) {
+            if yesButton.superview === yesButtonView {
+                addButtons(yesButton, noButton, toView: noButtonView)
+            }
+        } else {
+            if yesButton.superview === noButtonView {
+                addButtons(yesButton, nil, toView: yesButtonView)
+            }
+        }
     }
     
     // MARK: - Method(s)
