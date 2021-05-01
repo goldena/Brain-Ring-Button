@@ -28,7 +28,9 @@ class GameMasterViewController: UIViewController {
         
     @IBOutlet weak var circularTimerView: CircularCountdownTimer!
         
+    @IBOutlet weak var aboveYesButtonView: UIView!
     @IBOutlet weak var yesButtonView: UIView!
+    @IBOutlet weak var aboveNoButtonView: UIView!
     @IBOutlet weak var noButtonView: UIView!
     
     @IBOutlet weak var playersStackView: UIStackView!
@@ -72,11 +74,11 @@ class GameMasterViewController: UIViewController {
             toView.addSubview(button2)
             
             button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
-            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: -50).isActive = true
+            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: -toView.frame.width / 4).isActive = true
             button1.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
             
             button2.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
-            button2.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: 50).isActive = true
+            button2.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: toView.frame.width / 4).isActive = true
             button2.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
         } else {
             button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
@@ -99,11 +101,20 @@ class GameMasterViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
                 
         if isPortraitOrientation(for: size) {
+            yesButtonView.isHidden = true
+            aboveNoButtonView.isHidden = true
+            aboveYesButtonView.isHidden = true
+            
             if yesButton.superview === yesButtonView {
                 addButtons(yesButton, noButton, toView: noButtonView)
             }
         } else {
+            yesButtonView.isHidden = false
+            aboveNoButtonView.isHidden = false
+            aboveYesButtonView.isHidden = false
+            
             if yesButton.superview === noButtonView {
+                addButtons(noButton, nil, toView: noButtonView)
                 addButtons(yesButton, nil, toView: yesButtonView)
             }
         }
