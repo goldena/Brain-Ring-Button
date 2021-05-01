@@ -74,11 +74,11 @@ class GameMasterViewController: UIViewController {
             toView.addSubview(button2)
             
             button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
-            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: -toView.frame.width / 4).isActive = true
+            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: -toView.frame.width / 2).isActive = true
             button1.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
             
             button2.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
-            button2.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: toView.frame.width / 4).isActive = true
+            button2.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: toView.frame.width / 2).isActive = true
             button2.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
         } else {
             button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
