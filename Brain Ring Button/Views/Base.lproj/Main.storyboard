@@ -195,7 +195,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xML-L5-184">
                                         <rect key="frame" x="0.0" y="150" width="240" height="658"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JAd-ql-cdf">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JAd-ql-cdf" userLabel="Yes Button Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="164.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IK5-O3-X9K" userLabel="Above Yes Button View">
@@ -290,6 +290,7 @@
                         <outlet property="circularTimerView" destination="fou-hn-JdZ" id="rbd-nc-hVp"/>
                         <outlet property="noButtonView" destination="4s5-RV-HRY" id="iPK-Fr-mmR"/>
                         <outlet property="playersStackView" destination="vq8-LX-6Vs" id="IfA-gL-ALD"/>
+                        <outlet property="yesButtonStackView" destination="JAd-ql-cdf" id="g1D-Kk-tv3"/>
                         <outlet property="yesButtonView" destination="GJr-iS-BfI" id="qo8-po-GTk"/>
                     </connections>
                 </viewController>

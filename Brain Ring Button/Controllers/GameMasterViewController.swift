@@ -28,6 +28,7 @@ class GameMasterViewController: UIViewController {
         
     @IBOutlet weak var circularTimerView: CircularCountdownTimer!
         
+    @IBOutlet weak var yesButtonStackView: UIStackView!
     @IBOutlet weak var aboveYesButtonView: UIView!
     @IBOutlet weak var yesButtonView: UIView!
     @IBOutlet weak var aboveNoButtonView: UIView!
@@ -88,15 +89,17 @@ class GameMasterViewController: UIViewController {
     
     func layoutButtons(for size: CGSize) {
         if isPortraitOrientation(for: size) {
-            yesButtonView.isHidden = true
-            aboveNoButtonView.isHidden = true
-            aboveYesButtonView.isHidden = true
+            yesButtonStackView.isHidden = true
+            //yesButtonView.isHidden = true
+            //aboveNoButtonView.isHidden = true
+            //aboveYesButtonView.isHidden = true
 
             addButtons(yesButton, noButton, toView: noButtonView)
         } else {
-            yesButtonView.isHidden = false
-            aboveNoButtonView.isHidden = false
-            aboveYesButtonView.isHidden = false
+            yesButtonStackView.isHidden = false
+            //yesButtonView.isHidden = false
+            //aboveNoButtonView.isHidden = false
+            //aboveYesButtonView.isHidden = false
 
             addButtons(noButton, nil, toView: noButtonView)
             addButtons(yesButton, nil, toView: yesButtonView)
