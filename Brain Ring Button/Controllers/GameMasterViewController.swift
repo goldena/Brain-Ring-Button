@@ -48,10 +48,6 @@ class GameMasterViewController: UIViewController {
         yesButton.translatesAutoresizingMaskIntoConstraints = false
         noButton.translatesAutoresizingMaskIntoConstraints = false
         
-        addButtons(stopButton, nil, toView: circularTimerView)
-        addButtons(yesButton, nil, toView: yesButtonView)
-        addButtons(noButton, nil, toView: noButtonView)
-
         yesButton.setTitle("YES", for: .normal)
         noButton.setTitle("NO", for: .normal)
         
@@ -59,40 +55,61 @@ class GameMasterViewController: UIViewController {
         yesButton.addTarget(self, action: #selector(yesButtonPressed(_:)), for: .touchUpInside)
         noButton.addTarget(self, action: #selector(noButtonPressed(_:)), for: .touchUpInside)
         
-        yesButton.isEnabled = false
-        noButton.isEnabled = false
+        addButtons(stopButton, nil, toView: circularTimerView)
         
         resetTimer()
     }
     
     private func addButtons(_ button1: RoundButtonWithShadow, _ button2: RoundButtonWithShadow?, toView: UIView) {
         if button1.superview != nil { button1.removeFromSuperview() }
+        
         toView.addSubview(button1)
         
+        button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
+        button1.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
+        
+        // If the second button is not nil layout both with offset from the center
         if let button2 = button2 {
             if button2.superview != nil { button2.removeFromSuperview() }
+
             toView.addSubview(button2)
-            
-            button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
-            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: -toView.frame.width / 2).isActive = true
-            button1.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
-            
+
             button2.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
-            button2.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: toView.frame.width / 2).isActive = true
             button2.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
+
+            let offset = min(view.frame.width, view.frame.height) / 4
+            
+            button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: -offset).isActive = true
+            button2.centerXAnchor.constraint(equalTo: toView.centerXAnchor, constant: +offset).isActive = true
         } else {
-            button1.centerYAnchor.constraint(equalTo: toView.centerYAnchor).isActive = true
             button1.centerXAnchor.constraint(equalTo: toView.centerXAnchor).isActive = true
-            button1.widthAnchor.constraint(equalTo: button1.heightAnchor).isActive = true
+        }
+    }
+    
+    func layoutButtons(for size: CGSize) {
+        if isPortraitOrientation(for: size) {
+            yesButtonView.isHidden = true
+            aboveNoButtonView.isHidden = true
+            aboveYesButtonView.isHidden = true
+
+            addButtons(yesButton, noButton, toView: noButtonView)
+        } else {
+            yesButtonView.isHidden = false
+            aboveNoButtonView.isHidden = false
+            aboveYesButtonView.isHidden = false
+
+            addButtons(noButton, nil, toView: noButtonView)
+            addButtons(yesButton, nil, toView: yesButtonView)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        layoutButtons(for: view.frame.size)
     }
-    
+        
+    #warning("Move somewhere else")
     func isPortraitOrientation(for size: CGSize) -> Bool {
         size.height > size.width ? true : false
     }
@@ -100,24 +117,7 @@ class GameMasterViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
                 
-        if isPortraitOrientation(for: size) {
-            yesButtonView.isHidden = true
-            aboveNoButtonView.isHidden = true
-            aboveYesButtonView.isHidden = true
-            
-            if yesButton.superview === yesButtonView {
-                addButtons(yesButton, noButton, toView: noButtonView)
-            }
-        } else {
-            yesButtonView.isHidden = false
-            aboveNoButtonView.isHidden = false
-            aboveYesButtonView.isHidden = false
-            
-            if yesButton.superview === noButtonView {
-                addButtons(noButton, nil, toView: noButtonView)
-                addButtons(yesButton, nil, toView: yesButtonView)
-            }
-        }
+        layoutButtons(for: size)
     }
     
     // MARK: - Method(s)
@@ -149,7 +149,10 @@ class GameMasterViewController: UIViewController {
     
     func resetTimer() {
         stopTimer()
-                        
+                   
+        yesButton.isEnabled = false
+        noButton.isEnabled = false
+        
         remainingTime = countdownTimeLimit
         stopButton.setTitle(remainingTimeToString, for: .normal)
         circularTimerView.proportionOfCircle = 1.0
